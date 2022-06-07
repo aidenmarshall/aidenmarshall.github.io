@@ -21,6 +21,17 @@ I&amp;rsquo;m writing this tech blog to improve my software skills and English.<
     </item>
     
     <item>
+      <title>Go Maps - Missing Entry</title>
+      <link>/post/go-map-missing-entry/</link>
+      <pubDate>Sat, 04 Jun 2022 11:47:41 +0800</pubDate>
+      
+      <guid>/post/go-map-missing-entry/</guid>
+      
+        <description>What does Go Maps return if we look up a non-existent key?</description>
+      
+    </item>
+    
+    <item>
       <title>Go - Addressable</title>
       <link>/post/go-method-set/</link>
       <pubDate>Tue, 31 May 2022 23:55:51 +0800</pubDate>
