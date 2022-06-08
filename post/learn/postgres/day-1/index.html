@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      Aiden Marshall
+        |
+        PostgreSQL - Day 1
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.99.1" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Aiden Marshall" />
+  <meta
+    name="description"
+    content="
+      You can call me Aiden.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="/post/learn/postgres/day-1/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.f9132794301a01ff16550ed66763482bd848f62243d278f5e550229a158bfd32.js"
+    integrity="sha256-&#43;RMnlDAaAf8WVQ7WZ2NIK9hI9iJD0nj15VAimhWL/TI="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.560a26330d27ff44a44e83b53cd07a95d4230a65930d31c5c76a8d481e5b35bf.js"
+      integrity="sha256-VgomMw0n/0SkToO1PNB6ldQjCmWTDTHFx2qNSB5bNb8="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PostgreSQL - Day 1"/>
+<meta name="twitter:description" content="I began learning PostgreSQL and record down what I&rsquo;ve learned"/>
+
+
+
+  
+  <meta property="og:title" content="PostgreSQL - Day 1" />
+<meta property="og:description" content="I began learning PostgreSQL and record down what I&rsquo;ve learned" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/learn/postgres/day-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-06T23:42:44+08:00" />
+<meta property="article:modified_time" content="2022-06-06T23:42:44+08:00" /><meta property="og:site_name" content="Aiden&#39;s Blog" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "PostgreSQL - Day 1",
+        "headline": "PostgreSQL - Day 1",
+        "alternativeHeadline": "",
+        "description": "
+      
+        I began learning PostgreSQL and record down what I\u0026rsquo;ve learned
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/learn\/postgres\/day-1\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-06T23:42:44.00Z",
+        "datePublished": "2022-06-06T23:42:44.00Z",
+        "dateModified": "2022-06-06T23:42:44.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Aiden Marshall",
+            "url": "",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/learn\/postgres\/day-1\/",
+        "wordCount" : "240",
+        "genre" : [ 
+      
+      "learn"
+
+    ],
+        "keywords" : [ 
+      
+      "PostgreSQL"
+
+    
+      
+        ,
+
+      
+      "Database"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.png"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Aiden&#39;s Blog</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>You can call me Aiden.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/aidenmarshall"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/AidenMa13089638"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+            title="Twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Aiden Marshall
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9c062c557275acbaba71f0c7cd4024da3e3cc825d248bc4b2130811b0965330b.js"
+    integrity="sha256-nAYsVXJ1rLq6cfDHzUAk2j48yCXSSLxLITCBGwllMws="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>PostgreSQL - Day 1</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                Mon, Jun 6, 2022
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
+
+      <h1 id="learn-postgresql---day-1">Learn PostgreSQL - Day 1</h1>
+<p>I began learning PostgreSQL by <a href="https://www.youtube.com/watch?v=qw--VYLpxG4">Learn PostgreSQL Tutorial - Full Course for Beginners</a></p>
+<p>I record down what I&rsquo;ve learned.</p>
+<h2 id="1-what-is-a-database">1. What is a Database</h2>
+<p>A database is a place where you can store, manipulate and retrieve data.</p>
+<h2 id="2-postgresql-and-relational-database">2. PostgreSQL and Relational Database</h2>
+<p><code>Postgres</code> is the actual database engine.</p>
+<p><code>SQL</code> is the acronym for <code>Structured Query Language</code>.</p>
+<p><code>SQL</code> is a programming language that manages data held in <code>relational</code> databases.</p>
+<h3 id="how-data-is-stored">How data is stored</h3>
+<ul>
+<li>Stores data in tables
+<ul>
+<li>are formed by columns and rows.</li>
+<li>store attributes of objects as columns</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-a-relational-database">What is a relational database?</h3>
+<p>It&rsquo;s simply a relation between one or more tables.</p>
+<h2 id="3-introduce-postgresql">3. Introduce PostgreSQL</h2>
+<p>Postgres is an <code>Object-relational database management system</code>.</p>
+<ul>
+<li>modern</li>
+<li>open source</li>
+</ul>
+<h2 id="4-postgres-installation">4. Postgres installation</h2>
+<p>The easiest way is to install the <code>Postgres.app</code> on Mac.</p>
+<ul>
+<li><code>Additional Release</code> provides different versions of Postgres that you can switch</li>
+</ul>
+<p>After installation, you can start the app and see the GUI of the PostgreSQL server.</p>
+<p><img src="https://i.imgur.com/H9lXGOt.png" alt=""></p>
+<h2 id="5-gui-clients-vs-terminalcmd-clients">5. GUI Clients vs. Terminal/CMD Clients</h2>
+<p>Now we have the running server. We have to manage data by using a client connected to the server.</p>
+<p>There are many types of clients</p>
+<ul>
+<li>GUI client</li>
+<li>CLI</li>
+<li>Application</li>
+</ul>
+<h2 id="6-setup-psql-mac-os">6. Setup PSQL (MAC OS)</h2>
+<ol>
+<li>
+<p>Start the server
+<img src="https://i.imgur.com/e9vBZ1c.png" alt=""></p>
+</li>
+<li>
+<p>Double click on the database will open the terminal
+<img src="https://i.imgur.com/01Sgv7i.png" alt="">
+<img src="https://i.imgur.com/hPr9MmO.png" alt=""></p>
+</li>
+<li>
+<p>Add Postgres path to the shell</p>
+</li>
+</ol>
+<pre tabindex="0"><code>vim ~/.zshrc
+</code></pre><p>add the line below</p>
+<pre tabindex="0"><code>export PATH=&#34;$PATH:/Applications/Postgres.app/Contents/Versions/14/bin/&#34;
+</code></pre><p>then apply the change</p>
+<pre tabindex="0"><code>source ~/.zshrc
+</code></pre><p>Now you can execute <code>psql</code> in the shell directly!</p>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/learn/">learn</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/postgresql/">PostgreSQL</a><a class="tag" href="/tags/database/">Database</a></span>
+
+
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aidens-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Aiden Marshall
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.9c062c557275acbaba71f0c7cd4024da3e3cc825d248bc4b2130811b0965330b.js"
+    integrity="sha256-nAYsVXJ1rLq6cfDHzUAk2j48yCXSSLxLITCBGwllMws="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
