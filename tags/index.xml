@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Wed, 08 Jun 2022 23:56:50 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 23:50:02 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Database</title>
       <link>/tags/database/</link>
-      <pubDate>Wed, 08 Jun 2022 23:56:50 +0800</pubDate>
+      <pubDate>Thu, 09 Jun 2022 23:50:02 +0800</pubDate>
       
       <guid>/tags/database/</guid>
       
@@ -22,7 +22,7 @@
     <item>
       <title>PostgreSQL</title>
       <link>/tags/postgresql/</link>
-      <pubDate>Wed, 08 Jun 2022 23:56:50 +0800</pubDate>
+      <pubDate>Thu, 09 Jun 2022 23:50:02 +0800</pubDate>
       
       <guid>/tags/postgresql/</guid>
       

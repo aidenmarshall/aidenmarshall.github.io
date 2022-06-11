@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      Aiden Marshall
+        |
+        PostgreSQL - Day 4
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.100.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Aiden Marshall" />
+  <meta
+    name="description"
+    content="
+      You can call me Aiden.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="/post/learn/postgres/day-4/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.7a513c87595b64079c749049bbefff5a20a8d88467b9d5e813e33bfcd29880de.js"
+    integrity="sha256-elE8h1lbZAecdJBJu&#43;//WiCo2IRnudXoE&#43;M7/NKYgN4="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.1d1e60dd5031959e835e253306615c60139c78c47abbc27e3ef3e28bf82098b4.js"
+      integrity="sha256-HR5g3VAxlZ6DXiUzBmFcYBOceMR6u8J&#43;PvPii/ggmLQ="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PostgreSQL - Day 4"/>
+<meta name="twitter:description" content="Keep learning PostgreSQL. Learn &ldquo;GROUP BY&rdquo; and aggregation functions."/>
+
+
+
+  
+  <meta property="og:title" content="PostgreSQL - Day 4" />
+<meta property="og:description" content="Keep learning PostgreSQL. Learn &ldquo;GROUP BY&rdquo; and aggregation functions." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/learn/postgres/day-4/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-09T23:50:02+08:00" />
+<meta property="article:modified_time" content="2022-06-09T23:50:02+08:00" /><meta property="og:site_name" content="Aiden&#39;s Blog" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "PostgreSQL - Day 4",
+        "headline": "PostgreSQL - Day 4",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Keep learning PostgreSQL. Learn \u0026ldquo;GROUP BY\u0026rdquo; and aggregation functions.
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/post\/learn\/postgres\/day-4\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-09T23:50:02.00Z",
+        "datePublished": "2022-06-09T23:50:02.00Z",
+        "dateModified": "2022-06-09T23:50:02.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Aiden Marshall",
+            "url": "",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "favicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "\/post\/learn\/postgres\/day-4\/",
+        "wordCount" : "430",
+        "genre" : [ 
+      
+      "learn"
+
+    ],
+        "keywords" : [ 
+      
+      "PostgreSQL"
+
+    
+      
+        ,
+
+      
+      "Database"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.png"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Aiden&#39;s Blog</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>You can call me Aiden.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/aidenmarshall"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/AidenMa13089638"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+            title="Twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Aiden Marshall
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.972a2c29b7a36a3c40cc4798c8fab0dbae92c1089ab0691e84acbf0c7720ccb3.js"
+    integrity="sha256-lyosKbejajxAzEeYyPqw266SwQiasGkehKy/DHcgzLM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>PostgreSQL - Day 4</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                Thu, Jun 9, 2022
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">3-minute read</span>
+          </li>
+        </ul>
+
+      <p>Keep learning PostgreSQL by <a href="https://www.youtube.com/watch?v=qw--VYLpxG4">Learn PostgreSQL Tutorial - Full Course for Beginners</a>.</p>
+<h2 id="22-like-and-ilike">22. Like and iLike</h2>
+<p><code>like</code> operator is used to match text values against a pattern.</p>
+<ul>
+<li>get data which email is ending in .com
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> person
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> email <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;%.com&#39;</span>;
+</span></span></code></pre></div><ul>
+<li><code>%</code> is a wildcard</li>
+<li><code>_</code> means this has to match single characters.
+<ul>
+<li>get data which email start with 8 characters followed by <code>@</code>.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> person
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> email <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;________@&#39;</span>;
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>ILIKE</code> has the same functionality, but it&rsquo;s not case sensitive.</p>
+<h2 id="23-group-by">23. Group By</h2>
+<blockquote>
+<p>The GROUP BY statement groups rows that have the same values into summary rows</p>
+</blockquote>
+<p><code>GROUP BY</code> allows us to group data based on a column.</p>
+<blockquote>
+<p>The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.</p>
+</blockquote>
+<ul>
+<li>find how many people are there in these countries by using <code>COUNT()</code> function
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> country_of_birth, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> person
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> country_of_birth <span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> country_of_birth;
+</span></span></code></pre></div><img src="https://i.imgur.com/f1MzMME.png" alt=""></li>
+</ul>
+<h2 id="24-group-by-having">24. Group By Having</h2>
+<p>The HAVING Clause enables you to specify conditions that <strong>filter which group results appear</strong> in the results.</p>
+<ul>
+<li>showing country where more than 5 people born
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> country_of_birth, <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#66d9ef">FROM</span> person
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> country_of_birth
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(<span style="color:#f92672">*</span>) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>;
+</span></span></code></pre></div><img src="https://i.imgur.com/r305IM2.png" alt=""></li>
+</ul>
+<h3 id="aggregate-functions">aggregate functions</h3>
+<p><a href="https://www.postgresql.org/docs/current/functions-aggregate.html">https://www.postgresql.org/docs/current/functions-aggregate.html</a></p>
+<blockquote>
+<p>Aggregate functions compute a single result from a set of input values.</p>
+</blockquote>
+<ul>
+<li>count</li>
+<li>max</li>
+<li>min</li>
+<li>sum</li>
+</ul>
+<h2 id="25-adding-new-table-and-data-using-mockaroo">25. Adding New Table and Data Using Mockaroo</h2>
+<p>Generate new data about cars by Mockaroo.</p>
+<p><img src="https://i.imgur.com/itkcikX.png" alt=""></p>
+<p>The course used a different schema.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">create</span> <span style="color:#66d9ef">table</span> car (
+</span></span><span style="display:flex;"><span>	id BIGSERIAL <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>	make VARCHAR(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>	model VARCHAR(<span style="color:#ae81ff">100</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>	price NUMERIC(<span style="color:#ae81ff">19</span>, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>Thus, we must remove <code>$</code> characters from all the rows in the SQL.</p>
+<p>Finally, create a table by the <code>\i &lt;path of car sql&gt;</code> command.</p>
+<h2 id="26-calculating-min-max--average">26. Calculating Min, Max &amp; Average</h2>
+<p>This section is going to show how to use the essential aggregation function.</p>
+<h3 id="max">Max</h3>
+<p>Use the <code>Max()</code> command to query the most expensive car from data.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">Max</span>(price) <span style="color:#66d9ef">FROM</span> car;
+</span></span></code></pre></div><p><img src="https://i.imgur.com/1BFxDEf.png" alt=""></p>
+<h3 id="min">Min</h3>
+<p><img src="https://i.imgur.com/j9DfQIR.png" alt=""></p>
+<h3 id="avg">AVG</h3>
+<p><img src="https://i.imgur.com/JMQJy8D.png" alt=""></p>
+<h3 id="round">ROUND</h3>
+<p>Use the <code>ROUND</code> command to round avg price.
+<img src="https://i.imgur.com/0ANq4SM.png" alt=""></p>
+<h3 id="advance-practice">Advance practice</h3>
+<p>Get the minimum car price for each make.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> make, <span style="color:#66d9ef">MIN</span>(price) <span style="color:#66d9ef">FROM</span> car
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> make;
+</span></span></code></pre></div><p><img src="https://i.imgur.com/nUhTNII.png" alt=""></p>
+<h2 id="27-sum">27. SUM</h2>
+<blockquote>
+<p>The <code>SUM()</code> command computes the sum of the non-null input values.</p>
+</blockquote>
+<p>Get the sum of cars of each make.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> make, <span style="color:#66d9ef">SUM</span>(price) <span style="color:#66d9ef">FROM</span> car <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> make;
+</span></span></code></pre></div><p><img src="https://i.imgur.com/v33JZSt.png" alt=""></p>
+<h2 id="28-basics-of-arithmetic-operators">28. Basics of Arithmetic Operators</h2>
+<p><code>+ - * / ^ % !</code></p>
+<p>example: make a discount (50% off)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>, price <span style="color:#f92672">*</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span> <span style="color:#66d9ef">FROM</span> car;
+</span></span></code></pre></div><p><img src="https://i.imgur.com/lehgrB0.png" alt=""></p>
+<h2 id="29-arithmetic-operators---round">29. Arithmetic Operators - Round</h2>
+<p>You can specify the decimal places of Round</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span>, ROUND(price <span style="color:#f92672">*</span> <span style="color:#ae81ff">0</span>.<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">FROM</span> car;
+</span></span></code></pre></div><p><img src="https://i.imgur.com/BDuKGmX.png" alt=""></p>
+</div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/learn/">learn</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/postgresql/">PostgreSQL</a><a class="tag" href="/tags/database/">Database</a></span>
+
+
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aidens-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Aiden Marshall
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.972a2c29b7a36a3c40cc4798c8fab0dbae92c1089ab0691e84acbf0c7720ccb3.js"
+    integrity="sha256-lyosKbejajxAzEeYyPqw266SwQiasGkehKy/DHcgzLM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
