@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Thu, 09 Jun 2022 23:50:02 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Jun 2022 21:56:21 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQL - Day 5</title>
+      <link>/post/learn/postgres/day-5/</link>
+      <pubDate>Fri, 10 Jun 2022 21:56:21 +0800</pubDate>
+      
+      <guid>/post/learn/postgres/day-5/</guid>
+      
+        <description>Keep learning PostgreSQL. Learn &amp;lsquo;ALIAS&amp;rsquo;, &amp;lsquo;COALESCE&amp;rsquo; and &amp;lsquo;NULLIF&amp;rsquo;.</description>
+      
+    </item>
+    
     <item>
       <title>PostgreSQL - Day 4</title>
       <link>/post/learn/postgres/day-4/</link>
