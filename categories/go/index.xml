@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Aiden&#39;s Tech Blog</title>
-    <link>/categories/go/</link>
+    <link>https://aidenmarshall.github.io/categories/go/</link>
     <description>Recent content in Go on Aiden&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Sat, 04 Jun 2022 11:47:41 +0800</lastBuildDate><atom:link href="/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Jun 2022 11:47:41 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go Maps - Missing Entry</title>
-      <link>/post/go-map-missing-entry/</link>
+      <link>https://aidenmarshall.github.io/post/go-map-missing-entry/</link>
       <pubDate>Sat, 04 Jun 2022 11:47:41 +0800</pubDate>
       
-      <guid>/post/go-map-missing-entry/</guid>
+      <guid>https://aidenmarshall.github.io/post/go-map-missing-entry/</guid>
       
         <description>What does Go Maps return if we look up a non-existent key?</description>
       
@@ -21,10 +21,10 @@
     
     <item>
       <title>Go - Addressable</title>
-      <link>/post/go-method-set/</link>
+      <link>https://aidenmarshall.github.io/post/go-method-set/</link>
       <pubDate>Tue, 31 May 2022 23:55:51 +0800</pubDate>
       
-      <guid>/post/go-method-set/</guid>
+      <guid>https://aidenmarshall.github.io/post/go-method-set/</guid>
       
         <description>Why can we use a value of type &lt;code&gt;T&lt;/code&gt; to call a method declared with &lt;code&gt; *T&lt;/code&gt; receiver instead of a pointer to that type?</description>
       

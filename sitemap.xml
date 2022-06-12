@@ -2,64 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://aidenmarshall.github.io/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://aidenmarshall.github.io/categories/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/tags/database/</loc>
+    <loc>https://aidenmarshall.github.io/tags/database/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/categories/learn/</loc>
+    <loc>https://aidenmarshall.github.io/categories/learn/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/tags/postgresql/</loc>
+    <loc>https://aidenmarshall.github.io/tags/postgresql/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-7-1/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-7-1/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/post/</loc>
+    <loc>https://aidenmarshall.github.io/post/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://aidenmarshall.github.io/tags/</loc>
     <lastmod>2022-06-12T22:50:08+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-6/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-6/</loc>
     <lastmod>2022-06-11T22:20:33+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-5/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-5/</loc>
     <lastmod>2022-06-10T21:56:21+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-4/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-4/</loc>
     <lastmod>2022-06-09T23:50:02+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-3/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-3/</loc>
     <lastmod>2022-06-08T23:56:50+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-2/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-2/</loc>
     <lastmod>2022-06-07T23:27:45+08:00</lastmod>
   </url><url>
-    <loc>/post/learn/postgres/day-1/</loc>
+    <loc>https://aidenmarshall.github.io/post/learn/postgres/day-1/</loc>
     <lastmod>2022-06-06T23:42:44+08:00</lastmod>
   </url><url>
-    <loc>/post/first-post/</loc>
+    <loc>https://aidenmarshall.github.io/post/first-post/</loc>
     <lastmod>2022-06-05T01:01:08+08:00</lastmod>
   </url><url>
-    <loc>/tags/go/</loc>
+    <loc>https://aidenmarshall.github.io/tags/go/</loc>
     <lastmod>2022-06-04T11:47:41+08:00</lastmod>
   </url><url>
-    <loc>/categories/go/</loc>
+    <loc>https://aidenmarshall.github.io/categories/go/</loc>
     <lastmod>2022-06-04T11:47:41+08:00</lastmod>
   </url><url>
-    <loc>/post/go-map-missing-entry/</loc>
+    <loc>https://aidenmarshall.github.io/post/go-map-missing-entry/</loc>
     <lastmod>2022-06-04T11:47:41+08:00</lastmod>
   </url><url>
-    <loc>/post/go-method-set/</loc>
+    <loc>https://aidenmarshall.github.io/post/go-method-set/</loc>
     <lastmod>2022-05-31T23:55:51+08:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
+    <loc>https://aidenmarshall.github.io/about/</loc>
     <lastmod>2022-05-21T22:42:54+08:00</lastmod>
   </url>
 </urlset>

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aiden&#39;s Tech Blog</title>
-    <link>/</link>
+    <link>https://aidenmarshall.github.io/</link>
     <description>Recent content on Aiden&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Sun, 12 Jun 2022 22:50:08 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2022 22:50:08 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PostgreSQL - Day 7 - Part 1</title>
-      <link>/post/learn/postgres/day-7-1/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-7-1/</link>
       <pubDate>Sun, 12 Jun 2022 22:50:08 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-7-1/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-7-1/</guid>
       
         <description>Keep learning PostgreSQL. Learn &lt;code&gt;Primary Key&lt;/code&gt; and &lt;code&gt;Constraint&lt;/code&gt;.</description>
       
@@ -21,10 +21,10 @@
     
     <item>
       <title>PostgreSQL - Day 6</title>
-      <link>/post/learn/postgres/day-6/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-6/</link>
       <pubDate>Sat, 11 Jun 2022 22:20:33 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-6/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-6/</guid>
       
         <description>Keep learning PostgreSQL. Learn how to deal with &lt;code&gt;Date&lt;/code&gt; and &lt;code&gt;Time&lt;/code&gt;.</description>
       
@@ -32,10 +32,10 @@
     
     <item>
       <title>PostgreSQL - Day 5</title>
-      <link>/post/learn/postgres/day-5/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-5/</link>
       <pubDate>Fri, 10 Jun 2022 21:56:21 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-5/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-5/</guid>
       
         <description>Keep learning PostgreSQL. Learn &amp;lsquo;ALIAS&amp;rsquo;, &amp;lsquo;COALESCE&amp;rsquo; and &amp;lsquo;NULLIF&amp;rsquo;.</description>
       
@@ -43,10 +43,10 @@
     
     <item>
       <title>PostgreSQL - Day 4</title>
-      <link>/post/learn/postgres/day-4/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-4/</link>
       <pubDate>Thu, 09 Jun 2022 23:50:02 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-4/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-4/</guid>
       
         <description>Keep learning PostgreSQL. Learn &amp;ldquo;GROUP BY&amp;rdquo; and aggregation functions.</description>
       
@@ -54,10 +54,10 @@
     
     <item>
       <title>PostgreSQL - Day 3</title>
-      <link>/post/learn/postgres/day-3/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-3/</link>
       <pubDate>Wed, 08 Jun 2022 23:56:50 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-3/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-3/</guid>
       
         <description>Keep learning PostgreSQL. Learn how to create mock data and basic SQL commands.</description>
       
@@ -65,10 +65,10 @@
     
     <item>
       <title>PostgreSQL - Day 2</title>
-      <link>/post/learn/postgres/day-2/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-2/</link>
       <pubDate>Tue, 07 Jun 2022 23:27:45 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-2/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-2/</guid>
       
         <description>Keep learning PostgreSQL - Day 2.
 Learn how to create a database and table.
@@ -78,10 +78,10 @@ Learn how to insert records into tables</description>
     
     <item>
       <title>PostgreSQL - Day 1</title>
-      <link>/post/learn/postgres/day-1/</link>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-1/</link>
       <pubDate>Mon, 06 Jun 2022 23:42:44 +0800</pubDate>
       
-      <guid>/post/learn/postgres/day-1/</guid>
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-1/</guid>
       
         <description>I began learning PostgreSQL and record down what I&amp;rsquo;ve learned</description>
       
@@ -89,10 +89,10 @@ Learn how to insert records into tables</description>
     
     <item>
       <title>First Post</title>
-      <link>/post/first-post/</link>
+      <link>https://aidenmarshall.github.io/post/first-post/</link>
       <pubDate>Sun, 05 Jun 2022 01:01:08 +0800</pubDate>
       
-      <guid>/post/first-post/</guid>
+      <guid>https://aidenmarshall.github.io/post/first-post/</guid>
       
         <description>Hi, I&amp;rsquo;m Aiden.
 I&amp;rsquo;m writing this tech blog to improve my software skills and English.</description>
@@ -101,10 +101,10 @@ I&amp;rsquo;m writing this tech blog to improve my software skills and English.<
     
     <item>
       <title>Go Maps - Missing Entry</title>
-      <link>/post/go-map-missing-entry/</link>
+      <link>https://aidenmarshall.github.io/post/go-map-missing-entry/</link>
       <pubDate>Sat, 04 Jun 2022 11:47:41 +0800</pubDate>
       
-      <guid>/post/go-map-missing-entry/</guid>
+      <guid>https://aidenmarshall.github.io/post/go-map-missing-entry/</guid>
       
         <description>What does Go Maps return if we look up a non-existent key?</description>
       
@@ -112,10 +112,10 @@ I&amp;rsquo;m writing this tech blog to improve my software skills and English.<
     
     <item>
       <title>Go - Addressable</title>
-      <link>/post/go-method-set/</link>
+      <link>https://aidenmarshall.github.io/post/go-method-set/</link>
       <pubDate>Tue, 31 May 2022 23:55:51 +0800</pubDate>
       
-      <guid>/post/go-method-set/</guid>
+      <guid>https://aidenmarshall.github.io/post/go-method-set/</guid>
       
         <description>Why can we use a value of type &lt;code&gt;T&lt;/code&gt; to call a method declared with &lt;code&gt; *T&lt;/code&gt; receiver instead of a pointer to that type?</description>
       
@@ -123,10 +123,10 @@ I&amp;rsquo;m writing this tech blog to improve my software skills and English.<
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://aidenmarshall.github.io/about/</link>
       <pubDate>Sat, 21 May 2022 22:42:54 +0800</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://aidenmarshall.github.io/about/</guid>
       
         <description>Hi, I&amp;rsquo;m Aiden.
 I&amp;rsquo;m a full-stack engineer.
