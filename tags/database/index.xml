@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Sun, 12 Jun 2022 22:50:08 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2022 23:28:35 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQL - Day 7 - Part 2</title>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-7-2/</link>
+      <pubDate>Sun, 12 Jun 2022 23:28:35 +0800</pubDate>
+      
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-7-2/</guid>
+      
+        <description>Keep learning PostgreSQL. Learn &lt;code&gt;UPSERT&lt;/code&gt; and how to deal with conflict when &lt;code&gt;insert&lt;/code&gt;.</description>
+      
+    </item>
+    
     <item>
       <title>PostgreSQL - Day 7 - Part 1</title>
       <link>https://aidenmarshall.github.io/post/learn/postgres/day-7-1/</link>
