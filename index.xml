@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Sat, 11 Jun 2022 22:20:33 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Jun 2022 22:50:08 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQL - Day 7 - Part 1</title>
+      <link>/post/learn/postgres/day-7-1/</link>
+      <pubDate>Sun, 12 Jun 2022 22:50:08 +0800</pubDate>
+      
+      <guid>/post/learn/postgres/day-7-1/</guid>
+      
+        <description>Keep learning PostgreSQL. Learn &lt;code&gt;Primary Key&lt;/code&gt; and &lt;code&gt;Constraint&lt;/code&gt;.</description>
+      
+    </item>
+    
     <item>
       <title>PostgreSQL - Day 6</title>
       <link>/post/learn/postgres/day-6/</link>
