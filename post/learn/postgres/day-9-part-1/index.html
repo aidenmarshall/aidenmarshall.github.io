@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html
+  dir="ltr"
+  lang="en"
+  data-theme=""
+  class="html"
+><head>
+  <title>
+    
+      Aiden Marshall
+        |
+        PostgreSQL - Day 9 - Part 1
+
+
+      
+
+
+    
+  </title>
+
+  
+  <meta charset="utf-8" /><meta name="generator" content="Hugo 0.100.2" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="author" content="Aiden Marshall" />
+  <meta
+    name="description"
+    content="
+      You can call me Aiden.
+
+
+    "
+  />
+  
+  
+    
+    
+    <link
+      rel="stylesheet"
+      href="/scss/main.min.b2e0cb07595e3519ab1193bb421914e06c0e26b0cc561fef23b3c6131d4d2ffa.css"
+      integrity="sha256-suDLB1leNRmrEZO7QhkU4GwOJrDMVh/vI7PGEx1NL/o="
+      crossorigin="anonymous"
+      type="text/css"
+    />
+
+  
+
+  
+  <link
+    rel="stylesheet"
+    href="/css/markupHighlight.min.31b0a1f317f55c529a460897848c97436bb138b19c399b37de70d463a8bf6ed5.css"
+    integrity="sha256-MbCh8xf1XFKaRgiXhIyXQ2uxOLGcOZs33nDUY6i/btU="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/fontawesome.min.b1c4e6a10bdbab01f33fff9d78816ee68cf9a9a731f07668afd546a79924cb80.css"
+    integrity="sha256-scTmoQvbqwHzP/&#43;deIFu5oz5qacx8HZor9VGp5kky4A="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/solid.min.423dee17c62f55fa733a4ee13e00d523dfce88cc4f4ab4549a24ba36bd9de681.css"
+    integrity="sha256-Qj3uF8YvVfpzOk7hPgDVI9/OiMxPSrRUmiS6Nr2d5oE="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link
+    rel="stylesheet"
+    href="/fontawesome/css/brands.min.b7d54133b27e5b4de15245b8e143de3e8ed2d674c706137274cedc9953f31917.css"
+    integrity="sha256-t9VBM7J&#43;W03hUkW44UPePo7S1nTHBhNydM7cmVPzGRc="
+    crossorigin="anonymous"
+    type="text/css"
+  />
+  
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+  <link rel="canonical" href="https://aidenmarshall.github.io/post/learn/postgres/day-9-part-1/" />
+
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/anatole-header.min.7a513c87595b64079c749049bbefff5a20a8d88467b9d5e813e33bfcd29880de.js"
+    integrity="sha256-elE8h1lbZAecdJBJu&#43;//WiCo2IRnudXoE&#43;M7/NKYgN4="
+    crossorigin="anonymous"
+  ></script>
+
+  
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/anatole-theme-switcher.min.1d1e60dd5031959e835e253306615c60139c78c47abbc27e3ef3e28bf82098b4.js"
+      integrity="sha256-HR5g3VAxlZ6DXiUzBmFcYBOceMR6u8J&#43;PvPii/ggmLQ="
+      crossorigin="anonymous"
+    ></script>
+
+  
+
+  
+
+
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="PostgreSQL - Day 9 - Part 1"/>
+<meta name="twitter:description" content="Keep learning PostgreSQL. Learn more about foreign keys, how to export query to CSV, and the Sequence type"/>
+
+
+
+  
+  <meta property="og:title" content="PostgreSQL - Day 9 - Part 1" />
+<meta property="og:description" content="Keep learning PostgreSQL. Learn more about foreign keys, how to export query to CSV, and the Sequence type" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://aidenmarshall.github.io/post/learn/postgres/day-9-part-1/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-14T23:47:18+08:00" />
+<meta property="article:modified_time" content="2022-06-14T23:47:18+08:00" /><meta property="og:site_name" content="Aiden&#39;s Blog" />
+
+
+
+
+  
+  
+  
+  
+  <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "articleSection": "post",
+        "name": "PostgreSQL - Day 9 - Part 1",
+        "headline": "PostgreSQL - Day 9 - Part 1",
+        "alternativeHeadline": "",
+        "description": "
+      
+        Keep learning PostgreSQL. Learn more about foreign keys, how to export query to CSV, and the \u003ccode\u003eSequence\u003c\/code\u003e type
+
+
+      
+
+
+    ",
+        "inLanguage": "en-us",
+        "isFamilyFriendly": "true",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/aidenmarshall.github.io\/post\/learn\/postgres\/day-9-part-1\/"
+        },
+        "author" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "creator" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "accountablePerson" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "copyrightHolder" : {
+            "@type": "Person",
+            "name": "Aiden Marshall"
+        },
+        "copyrightYear" : "2022",
+        "dateCreated": "2022-06-14T23:47:18.00Z",
+        "datePublished": "2022-06-14T23:47:18.00Z",
+        "dateModified": "2022-06-14T23:47:18.00Z",
+        "publisher":{
+            "@type":"Organization",
+            "name": "Aiden Marshall",
+            "url": "https://aidenmarshall.github.io",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/aidenmarshall.github.iofavicon-32x32.png",
+                "width":"32",
+                "height":"32"
+            }
+        },
+        "image": 
+      [
+      ]
+
+    ,
+        "url" : "https:\/\/aidenmarshall.github.io\/post\/learn\/postgres\/day-9-part-1\/",
+        "wordCount" : "397",
+        "genre" : [ 
+      
+      "learn"
+
+    ],
+        "keywords" : [ 
+      
+      "PostgreSQL"
+
+    
+      
+        ,
+
+      
+      "Database"
+
+    ]
+    }
+  </script>
+
+
+
+</head>
+<body
+    
+      class="body theme--light"
+
+    
+  >
+    <div class="wrapper">
+      <aside
+        
+          class="wrapper__sidebar"
+
+        
+      ><div
+  class="sidebar
+    animated fadeInDown
+
+  "
+>
+  <div class="sidebar__content">
+    <div class="sidebar__introduction">
+      <img
+        class="sidebar__introduction-profileimage"
+        src="/images/profile.png"
+        alt="profile picture"
+      />
+      
+        <div class="sidebar__introduction-title">
+          <a href="/">Aiden&#39;s Blog</a>
+        </div>
+
+      
+      <div class="sidebar__introduction-description">
+        <p>You can call me Aiden.</p>
+      </div>
+    </div>
+    <ul class="sidebar__list">
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://github.com/aidenmarshall"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            title="GitHub"
+          >
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+        <li class="sidebar__list-item">
+          <a
+            href="https://twitter.com/AidenMa13089638"
+            target="_blank"
+            rel="noopener"
+            aria-label="Twitter"
+            title="Twitter"
+          >
+            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+          </a>
+        </li>
+
+      
+    </ul>
+  </div><footer class="footer footer__sidebar">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Aiden Marshall
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.972a2c29b7a36a3c40cc4798c8fab0dbae92c1089ab0691e84acbf0c7720ccb3.js"
+    integrity="sha256-lyosKbejajxAzEeYyPqw266SwQiasGkehKy/DHcgzLM="
+    crossorigin="anonymous"
+  ></script></div>
+</aside>
+      <main
+        
+          class="wrapper__main"
+
+        
+      >
+        <header class="header"><div
+  class="
+    animated fadeInDown
+
+  "
+>
+  <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+    <span aria-hidden="true" class="navbar-burger__line"></span>
+  </a>
+  <nav class="nav">
+    <ul class="nav__list" id="navMenu">
+      
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/"
+              
+              title=""
+              >Home</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/post/"
+              
+              title=""
+              >Posts</a
+            >
+          </li>
+
+        
+
+
+      
+        
+        
+          <li class="nav__list-item">
+            <a
+              
+              href="/about"
+              
+              title=""
+              >About</a
+            >
+          </li>
+
+        
+
+
+      
+    </ul>
+    <ul class="nav__list nav__list--end">
+      
+      
+        <li class="nav__list-item">
+          <div class="themeswitch">
+            <a title="Switch Theme">
+              <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a>
+          </div>
+        </li>
+
+      
+    </ul>
+  </nav>
+</div>
+</header>
+  <div
+    class="post 
+      animated fadeInDown
+
+    "
+  >
+    
+    <div class="post__content">
+      <h1>PostgreSQL - Day 9 - Part 1</h1>
+      
+        <ul class="post__meta">
+          <li class="post__meta-item">
+            <em class="fas fa-calendar-day post__meta-icon"></em>
+            <span class="post__meta-text"
+              >
+                Tue, Jun 14, 2022
+
+
+              
+            </span>
+          </li>
+          <li class="post__meta-item">
+            <em class="fas fa-stopwatch post__meta-icon"></em>
+            <span class="post__meta-text">2-minute read</span>
+          </li>
+        </ul>
+
+      <p>Keep learning PostgreSQL by <a href="https://www.youtube.com/watch?v=qw--VYLpxG4">Learn PostgreSQL Tutorial - Full Course for Beginners</a>.</p>
+<p>In this part, we&rsquo;ll learn more about foreign keys, how to export query to CSV, and the <code>Sequence</code> type.</p>
+<p>Let&rsquo;s dig in!</p>
+<h2 id="50-deleting-records-referenced-by-foreign-keys">50. Deleting Records Referenced By Foreign Keys</h2>
+<p>How to delete when you have a foreign key constraint.</p>
+<ul>
+<li>First, we create a record that saves a person who owns a car.
+<img src="https://i.imgur.com/Uyz9v45.png" alt=""></li>
+<li>What will happen when we delete the car owned by the person?
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">from</span> car <span style="color:#66d9ef">WHERE</span> id <span style="color:#f92672">=</span> <span style="color:#ae81ff">13</span>;
+</span></span></code></pre></div><ul>
+<li>You will get an error about violating the foreign key constraint.
+<pre tabindex="0"><code>ERROR:  update or delete on table &#34;car&#34; violates foreign key constraint &#34;person_car_id_fkey&#34; on table &#34;person&#34;
+DETAIL:  Key (id)=(13) is still referenced from table &#34;person&#34;.
+</code></pre></li>
+</ul>
+</li>
+<li>There are two ways to solve it.
+<ul>
+<li>Delete the Quill&rsquo;s record</li>
+<li>Remove the car of Quill. =&gt; Update car_id to NULL.</li>
+</ul>
+</li>
+</ul>
+<h3 id="cascade">Cascade</h3>
+<p>You can have a cascade on your table creation.</p>
+<p><code>Cascade</code> simply ignores the actual foreign key and goes ahead and removes every single row where that key is referenced.</p>
+<p>It&rsquo;s not a good practice. You should have full control of your data.</p>
+<h2 id="51-exporting-query-results-to-csv">51. Exporting Query Results to CSV</h2>
+<p>You can find how to output in the section, Input/Output, of help by the <code>\?</code> command.</p>
+<p><img src="https://i.imgur.com/pg2OtK7.png" alt=""></p>
+<p>Use the <code>\copy</code> command to export query results to CSV.</p>
+<ul>
+<li>Syntax
+<pre tabindex="0"><code>\copy (&lt;your_query&gt;) TO &lt;output_file_path&gt; [DELIMITER &#39;&lt;the delimiter which you want to use&gt;&#39;] CSV [HEADER]
+</code></pre></li>
+</ul>
+<h2 id="52-serial--sequences">52. Serial &amp; Sequences</h2>
+<p>In this section, we&rsquo;ll learn the <code>BIGSERIAL</code> data type.</p>
+<p>In description of table, our <code>BIGSERIAL</code> column is saved as <code>BIGINT</code> data type with a default value.</p>
+<p>The default value is <code>nextval('person_id_seq'::regclass)</code>
+<img src="https://i.imgur.com/1aAvyQy.png" alt=""></p>
+<p><code>\d</code> shows the <code>person_id_seq</code> is a <code>sequence</code> type.</p>
+<blockquote>
+<p>A sequence in PostgreSQL is a user-defined schema-bound object that generates a sequence of integers based on a specified specification.</p>
+</blockquote>
+<p>In short, the <code>sequence</code> generates a sequence of integers.</p>
+<p>And <code>person_id_seq</code> is creating integers for the <code>id</code> column in the <code>person</code> table.</p>
+<h3 id="lab">Lab</h3>
+<ul>
+<li>
+<p>We can select the <code>person_id_seq</code> to check what it contains.
+<img src="https://i.imgur.com/oRskqap.png" alt=""></p>
+</li>
+<li>
+<p>We may suggest that the next value generated by <code>person_id_seq</code> is <code>last_value</code> plus 1.</p>
+</li>
+<li>
+<p>Try to execute the command we saw in the table description.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> nextval(<span style="color:#e6db74">&#39;person_id_seq&#39;</span>::regclass);
+</span></span></code></pre></div><p><img src="https://i.imgur.com/pUksG7B.png" alt=""></p>
+<p>As we expected, we got a value of 5.</p>
+</li>
+<li>
+<p>Now, let&rsquo;s check the <code>person_id_seq</code> again.
+<img src="https://i.imgur.com/bV7rdtZ.png" alt="">
+The last_value was increased to 5.</p>
+</li>
+<li>
+<p>If we insert a record now, we&rsquo;ll get a record with an id is 6.
+<img src="https://i.imgur.com/N9SyfQ1.png" alt=""></p>
+</li>
+</ul>
+<h3 id="restart-a-sequence">Restart a Sequence</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> SEQUENCE person_id_seq <span style="color:#66d9ef">RESTART</span> <span style="color:#66d9ef">WITH</span> <span style="color:#ae81ff">10</span>;
+</span></span></code></pre></div></div>
+    <div class="post__footer">
+      
+        <span><a class="category" href="/categories/learn/">learn</a></span>
+
+
+
+
+      
+
+      
+        <span><a class="tag" href="/tags/postgresql/">PostgreSQL</a><a class="tag" href="/tags/database/">Database</a></span>
+
+
+
+
+      
+    </div>
+
+    <div id="comment">
+          <h2>comments</h2>
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "aidens-blog" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        </div>
+  </div>
+
+
+      </main>
+    </div><footer class="footer footer__base">
+  <ul class="footer__list">
+    <li class="footer__item">
+      &copy;
+      
+        Aiden Marshall
+        2022
+
+
+      
+    </li>
+    
+  </ul>
+</footer>
+  
+  <script
+    type="text/javascript"
+    src="/js/medium-zoom.min.972a2c29b7a36a3c40cc4798c8fab0dbae92c1089ab0691e84acbf0c7720ccb3.js"
+    integrity="sha256-lyosKbejajxAzEeYyPqw266SwQiasGkehKy/DHcgzLM="
+    crossorigin="anonymous"
+  ></script></body>
+</html>
