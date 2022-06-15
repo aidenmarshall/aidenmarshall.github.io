@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Tue, 14 Jun 2022 23:47:18 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 21:30:16 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostgreSQL - Day 9 - Part 2</title>
+      <link>https://aidenmarshall.github.io/post/learn/postgres/day-9-part-2/</link>
+      <pubDate>Wed, 15 Jun 2022 21:30:16 +0800</pubDate>
+      
+      <guid>https://aidenmarshall.github.io/post/learn/postgres/day-9-part-2/</guid>
+      
+        <description>Keep learning PostgreSQL. Learn how to add extensions to Postgres and &lt;code&gt;UUIDs&lt;/code&gt;.</description>
+      
+    </item>
+    
     <item>
       <title>PostgreSQL - Day 9 - Part 1</title>
       <link>https://aidenmarshall.github.io/post/learn/postgres/day-9-part-1/</link>
