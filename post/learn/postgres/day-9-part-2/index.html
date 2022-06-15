@@ -454,10 +454,10 @@ It&rsquo;s globally unique. In other words, the collision is pretty much impossi
 <p>There is a UUID data type in Postgres.
 Thus, the column which uses a UUID should be the <code>UUID</code> type.</p>
 <p>Let&rsquo;s recreate the person table with an id column using a UUID.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">table</span> person <span style="color:#960050;background-color:#1e0010">{</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">table</span> person (
 </span></span><span style="display:flex;"><span>    id UUID <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
 </span></span><span style="display:flex;"><span>                <span style="color:#960050;background-color:#1e0010">︙</span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">}</span>
+</span></span><span style="display:flex;"><span>);
 </span></span></code></pre></div><p>Then we have to invoke the function which generates a UUID when inserting a record for a person.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">insert</span> <span style="color:#66d9ef">into</span> person (id, ...)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">values</span> (uuid_generate_v4(), ...);
