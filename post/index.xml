@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2022-{{ YEAR }}</copyright>
-    <lastBuildDate>Thu, 16 Jun 2022 23:30:24 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jun 2022 15:14:28 +0800</lastBuildDate><atom:link href="https://aidenmarshall.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL (Windows Subsystem for Linux)</title>
+      <link>https://aidenmarshall.github.io/post/wsl/</link>
+      <pubDate>Sat, 25 Jun 2022 15:14:28 +0800</pubDate>
+      
+      <guid>https://aidenmarshall.github.io/post/wsl/</guid>
+      
+        <description>Run a Linux environment on Windows with WSL2.</description>
+      
+    </item>
+    
     <item>
       <title>Introduction to dbdiagram.io</title>
       <link>https://aidenmarshall.github.io/post/dbdiagram-io/</link>
